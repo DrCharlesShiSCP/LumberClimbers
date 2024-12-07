@@ -6,6 +6,9 @@ public class Cutmanage : MonoBehaviour
     public GameObject CutPrefab;
     public GameObject Cut2Prefab;
 
+    public AudioClip CutClip;
+    public AudioSource SoundSource;
+
     public List<GameObject> Cuts = new List<GameObject>();
 
     public int player1CutCount = 0;
@@ -31,6 +34,7 @@ public class Cutmanage : MonoBehaviour
     }
     public void AddCutSection(int playerNumber)
     {
+        SoundSource.PlayOneShot(CutClip);
         if (playerNumber == 1)
         {
             if (player1CutSpawnPoint != null)

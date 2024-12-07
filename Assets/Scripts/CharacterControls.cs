@@ -42,6 +42,12 @@ public class CharacterControls : MonoBehaviour
     private bool player1CanInsert = false;
     private bool player2CanInsert = false;
 
+    [Header("SoundEffects")]
+    public AudioClip ChopSound;
+    public AudioClip plankingSound;
+    public AudioClip JumpingSound;
+    public AudioSource SoundeffectSource;
+
     ScoreTrack scoreTrack;
     TreeManager treeManager;
     Cutmanage cutmanage;
@@ -118,6 +124,7 @@ public class CharacterControls : MonoBehaviour
             player1ChopsSinceLastClimb = 0;
         }
 
+        SoundeffectSource.PlayOneShot(ChopSound);
         scoreTrack.RegisterChop(1);
         playerReady.SetActive(false);
         playerChop.SetActive(true);
@@ -133,6 +140,7 @@ public class CharacterControls : MonoBehaviour
     {
         if (player1PlateSpawnPoint != null)
         {
+            SoundeffectSource.PlayOneShot(plankingSound);
             Instantiate(standplatePrefab, player1PlateSpawnPoint.position, Quaternion.identity);
             player1PlatePlaced = true;
             player1CanInsert = false;
@@ -141,6 +149,7 @@ public class CharacterControls : MonoBehaviour
 
     private void Player1Climb()
     {
+        SoundeffectSource.PlayOneShot(JumpingSound);
         player1.position = new Vector3(player1.position.x, player1.position.y + 3f, player1.position.z);
         player1ChopCount += chopsAddedByClimb;
         player1CanClimb = false;
@@ -161,6 +170,7 @@ public class CharacterControls : MonoBehaviour
             player2ChopsSinceLastClimb = 0;
         }
 
+        SoundeffectSource.PlayOneShot(ChopSound);
         scoreTrack.RegisterChop(2);
         player2Ready.SetActive(false);
         player2Chop.SetActive(true);
@@ -176,6 +186,7 @@ public class CharacterControls : MonoBehaviour
     {
         if (player2PlateSpawnPoint != null)
         {
+            SoundeffectSource.PlayOneShot(plankingSound);
             Instantiate(standplatePrefab, player2PlateSpawnPoint.position, Quaternion.identity);
             player2PlatePlaced = true;
             player2CanInsert = false;
@@ -184,6 +195,7 @@ public class CharacterControls : MonoBehaviour
 
     private void Player2Climb()
     {
+        SoundeffectSource.PlayOneShot(JumpingSound);
         player2.position = new Vector3(player2.position.x, player2.position.y + 3f, player2.position.z);
         player2ChopCount += chopsAddedByClimb;
         player2CanClimb = false;

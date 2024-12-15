@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d5d8da2bae4d72041b05bfe5847f37fb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119325
+  packageName: Circular Timer
+  packageVersion: 1.0
+  assetPath: Assets/CircularTimer/Documentation/How to use the Circular Timer.pdf
+  uploadId: 247720

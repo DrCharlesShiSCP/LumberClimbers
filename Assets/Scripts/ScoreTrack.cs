@@ -13,8 +13,8 @@ public class ScoreTrack : MonoBehaviour
 
     private int player1Chops = 0;
     private int player2Chops = 0;
-    private float player1Height = 0f;
-    private float player2Height = 0f;
+    public float player1Height = 0f;
+    public float player2Height = 0f;
     //private int P1Climb = 0;
     //private int P2Climb = 0;
 

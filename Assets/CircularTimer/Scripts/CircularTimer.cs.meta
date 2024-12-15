@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5c418f6b5167f6747b47811ffd6e7e55
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 119325
+  packageName: Circular Timer
+  packageVersion: 1.0
+  assetPath: Assets/CircularTimer/Scripts/CircularTimer.cs
+  uploadId: 247720
